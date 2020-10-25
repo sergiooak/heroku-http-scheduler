@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
 app.post("/*", function (req, res) {
   console.log(`Sending wake up request to ${req.body.host}${req.originalUrl}`);
   axios
-    .get(`${req.body.host}${req.originalUrl}`)
+    .get(`${req.body.host}`)
     .then(() => {
       // If success, send the next request imediatly
       console.log("Making the real request right now");
